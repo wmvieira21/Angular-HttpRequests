@@ -65,8 +65,8 @@ export class PostService {
         return this.http.delete(this.urlBackEnd, {
             observe: 'events'
         }).pipe(tap((event) => {
-            /*Tap doesn't alter the result/response. It's just used when you wanna to run some code. 
-            Example, infor the user that the request was sent and we're waiting for the responde*/
+            /*Tap doesn't alter the result/response. It's just used when you wanna run some code. 
+            Example, inform the user that the request was sent and we're waiting for the responde*/
             //console.log(event);
             if (event.type == HttpEventType.Response) {
                 console.log(event);
